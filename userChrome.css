@@ -261,11 +261,15 @@ toolbarseparator {
     background-color: #E5E5E5 !important;
     border-bottom: 1px solid rgba(0,0,0,0.17) !important;
 }
+#spacesPinnedButton:not([type="menu-button"], [disabled="true"]):is([open="true"], [checked="true"], :hover:active) {
+    border-color: none !important;
+    box-shadow: none !important;
+}
 
 /* stand alone dark focus */
 
 #tabs-toolbar:-moz-lwtheme-brighttext:-moz-window-inactive {
-	background: linear-gradient(180deg, #3B3B3B 0px, #383838 42px, rgba(27, 27, 27, 1) 42px, rgba(27, 27, 27, 1) 43px, rgb(50, 50, 50) 44px, rgb(51, 51, 51) 46px, rgb(51, 51, 51) 100%) !important;
+	background: linear-gradient(180deg, #3B3B3B 0px, #383838 42px, rgba(27, 27, 27, 1) 42px, rgba(27, 27, 27, 1) 43px, rgb(48, 48, 48) 43px, rgb(51, 51, 51) 46px, rgb(51, 51, 51) 100%) !important;
 	border-bottom: 1px solid rgba(27, 27, 27, 1) !important;
 }
 .tab-background[selected="true"]:-moz-lwtheme-brighttext:-moz-window-inactive {
@@ -286,8 +290,8 @@ toolbarseparator {
     --lwt-toolbarbutton-hover-background: #4C4C4C !important;
     --lwt-toolbarbutton-hover-bordercolor: #272727 !important;
     --lwt-toolbarbutton-hover-boxshadow: none !important;
-    --lwt-toolbarbutton-checked-background: #EEEEEE !important;
-    --lwt-toolbarbutton-active-background: #2E2E2E !important;
+    --lwt-toolbarbutton-checked-background: #4C4C4C !important;
+    --lwt-toolbarbutton-active-background: #4C4C4C !important;
     --lwt-toolbarbutton-active-boxshadow: 0 1px 1px #2E2E2E inset, 0 0 1px #2E2E2E inset !important;
 }
 .searchBox:-moz-lwtheme-brighttext, .themeableSearchBox:-moz-lwtheme-brighttext {
@@ -297,7 +301,7 @@ toolbarseparator {
 	box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.3), 0 1px 0 0 rgba(255,255,255,0.1) !important;
 }
 #tabs-toolbar:-moz-lwtheme-brighttext {
-	background: linear-gradient(180deg, #343434 0px, #2C2C2C 42px, rgba(27, 27, 27, 1) 42px, rgba(27, 27, 27, 1) 43px, rgb(47, 47, 47) 44px, rgb(45, 45, 45) 46px, rgb(45, 45, 45) 100%) !important;
+	background: linear-gradient(180deg, #343434 0px, #2C2C2C 42px, rgba(27, 27, 27, 1) 42px, rgba(27, 27, 27, 1) 43px, rgb(36, 36, 36) 43px, rgb(45, 45, 45) 46px, rgb(45, 45, 45) 100%) !important;
 	border-bottom: 1px solid rgba(27, 27, 27, 1) !important;
 }
 .tab-background[selected="true"]:-moz-lwtheme-brighttext {
@@ -335,7 +339,7 @@ toolbarseparator:-moz-lwtheme-brighttext  {
 
 @media (prefers-color-scheme: dark) {
 #tabs-toolbar:-moz-window-inactive {
-	background: linear-gradient(180deg, #3B3B3B 0px, #383838 42px, rgba(27, 27, 27, 1) 42px, rgba(27, 27, 27, 1) 43px, rgb(50, 50, 50) 44px, rgb(51, 51, 51) 46px, rgb(51, 51, 51) 100%) !important;
+	background: linear-gradient(180deg, #3B3B3B 0px, #383838 42px, rgba(27, 27, 27, 1) 42px, rgba(27, 27, 27, 1) 43px, rgb(48, 48, 48) 43px, rgb(51, 51, 51) 46px, rgb(51, 51, 51) 100%) !important;
 	border-bottom: 1px solid rgba(27, 27, 27, 1) !important;
 }
 .tab-background[selected="true"]:-moz-window-inactive {
@@ -357,8 +361,8 @@ toolbarseparator:-moz-lwtheme-brighttext  {
     --lwt-toolbarbutton-hover-background: #4C4C4C !important;
     --lwt-toolbarbutton-hover-bordercolor: #272727 !important;
     --lwt-toolbarbutton-hover-boxshadow: none !important;
-    --lwt-toolbarbutton-checked-background: #EEEEEE !important;
-    --lwt-toolbarbutton-active-background: #2E2E2E !important;
+    --lwt-toolbarbutton-checked-background: #4C4C4C !important;
+    --lwt-toolbarbutton-active-background: #4C4C4C !important;
     --lwt-toolbarbutton-active-boxshadow: 0 1px 1px #2E2E2E inset, 0 0 1px #2E2E2E inset !important;
 }
 .searchBox, .themeableSearchBox {
@@ -368,7 +372,7 @@ toolbarseparator:-moz-lwtheme-brighttext  {
 	box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.3), 0 1px 0 0 rgba(255,255,255,0.1) !important;
 }
 #tabs-toolbar {
-	background: linear-gradient(180deg, #343434 0px, #2C2C2C 42px, rgba(27, 27, 27, 1) 42px, rgba(27, 27, 27, 1) 43px, rgb(47, 47, 47) 44px, rgb(45, 45, 45) 46px, rgb(45, 45, 45) 100%) !important;
+	background: linear-gradient(180deg, #343434 0px, #2C2C2C 42px, rgba(27, 27, 27, 1) 42px, rgba(27, 27, 27, 1) 43px, rgb(36, 36, 36) 43px, rgb(45, 45, 45) 46px, rgb(45, 45, 45) 100%) !important;
 	border-bottom: 1px solid rgba(27, 27, 27, 1) !important;
 }
 .tab-background[selected="true"] {
