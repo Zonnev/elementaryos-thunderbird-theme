@@ -9,7 +9,7 @@
 menubar > menu[open] {
     appearance: none !important;
     background: lightgrey !important;
-    margin: 0px 2px !important;
+    margin: 0px 8px !important;
 }
 #toolbar-menubar {
     border-radius: 7px 7px 0px 0px !important;
