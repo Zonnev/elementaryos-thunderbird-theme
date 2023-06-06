@@ -1,5 +1,5 @@
 # An elementary OS theme for Thunderbird
-![Screenshot](Thunderbird_eOS_theme.png)
+![Screenshot](Thunderbird_eOS_theme_with_beta.png)
 ## Installation
 
 1. Install Thunderbird in AppCenter or type `sudo apt install thunderbird` in the Terminal.
@@ -13,3 +13,5 @@
 ## Work in progress
 
 For now this theme only supports the default elementary OS window control layout and a manual install. I want the Thunderbird theme to support all window control layouts to be set in Pantheon Tweaks. When that work is done, we make an install script which automatically selects the window control layout in use and will make installing the Thunderbird theme much more easy.
+
+I have added a `userChrome.css` for **Thunderbird Beta** in the folder `Thunderbird Beta theme`.
