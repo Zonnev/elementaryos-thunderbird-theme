@@ -48,6 +48,12 @@
     height: 25px !important;
     justify-content: space-between !important;
 }
+:root[spacestoolbar="true"][uidensity="touch"] .titlebar-close {
+    margin-right: 20px !important;
+}
+:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-close {
+    margin-right: 10px !important;
+}
 
 /****** other elements ******/
 
@@ -75,11 +81,16 @@ toolbarseparator {
 }
 
 /**** tabs ****/
+
+:root[uidensity="touch"] .tabmail-tab {
+    margin-top: 10px !important;
+}
 .tabmail-tab {
-    --tab-max-width: 235px !important;
+    --tab-max-width: 225px !important;
 }
 #tabs-toolbar {
-    height: 35px !important;
+    min-height: 35px !important;
+    max-height: 35px !important;
     box-shadow: none !important;
 }
 .tabmail-tab[selected="true"] {
