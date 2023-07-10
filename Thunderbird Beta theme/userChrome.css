@@ -195,7 +195,7 @@ unified-toolbar {
     border-color: transparent !important;
     box-shadow: none !important;
     padding: 0px !important;
-    margin-inline: 6px !important;
+    margin-inline: 7px 6px !important;
     margin-top: 5px !important;
 }
 :root:not([uidensity="compact"]):not([uidensity="touch"]) #button-appmenu:is([open="true"], :active) {
