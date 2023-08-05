@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/*** This userChrome is for Thunderbird Supernova (115.x) ***/
+/*** This userChrome is for apt installs of Thunderbird ***/
 
 /****** rounded top window corners ******/
 #navigation-toolbox {
@@ -196,7 +196,6 @@ unified-toolbar {
     box-shadow: none !important;
     padding: 0px !important;
     margin-inline: 7px 6px !important;
-    margin-top: 4px !important;
 }
 :root:not([uidensity="compact"]):not([uidensity="touch"]) #button-appmenu:is([open="true"], :active) {
     min-width: 30px !important;
@@ -208,7 +207,6 @@ unified-toolbar {
     box-shadow: none !important;
     padding: 0px !important;
     margin-inline: 8px !important;
-    margin-top: 9px !important;
 }
 :root[uidensity="touch"] #button-appmenu:is([open="true"], :active) {
     min-width: 30px !important;
@@ -219,8 +217,7 @@ unified-toolbar {
     border-color: transparent !important;
     box-shadow: none !important;
     padding: 0px !important;
-    margin-inline: 11px !important;
-    margin-top: 14px !important;
+    margin-inline: 8px !important;
 }
 
 /**** colors ****/
