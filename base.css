@@ -9,57 +9,6 @@
     border-radius: 6px 6px 0 0 !important;
 }
 
-/****** window controls buttons ******/
-
-.titlebar-buttonbox-container {
-    position: absolute !important;
-}
-.titlebar-buttonbox {
-    appearance: none !important;
-    top: -13px !important;
-    position: absolute !important;
-    flex-direction: row !important;
-    display: flex !important;
-    width: calc(100vw - 12px) !important;
-    height: 25px !important;
-    justify-content: space-between !important;
-}
-
-/* make room for window control buttons */
-
-#unifiedToolbar {
-    position: relative !important;
-    margin-left: 40px !important;
-    margin-right: 40px !important;
-    z-index: 1 !important;
-}
-
-/* mirror max and restore button */
-
-.titlebar-max, .titlebar-restore {
-    transform: scaleX(-1) !important;
-}
-
-/* move window control buttons when spacestoolbar is active */
-
-:root[spacestoolbar="true"] .titlebar-buttonbox {
-    appearance: none !important;
-    top: -13px !important;
-    margin-right: 40px !important;
-    position: absolute !important;
-    flex-direction: row !important;
-    display: flex !important;
-    width: calc(100vw - 52px) !important;
-    height: 25px !important;
-    justify-content: space-between !important;
-}
-:root[spacestoolbar="true"][uidensity="touch"] .titlebar-close {
-    margin-right: 20px !important;
-}
-:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-close {
-    margin-right: 10px !important;
-}
-
 /****** other elements ******/
 
 global-search-bar:not([hidden]) {

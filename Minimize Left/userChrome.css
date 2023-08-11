@@ -1,0 +1,85 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* This userChrome is for button layout Minimize Left */
+
+@import "base.css";
+
+/****** window controls buttons ******/
+
+.titlebar-buttonbox-container {
+    position: absolute !important;
+}
+.titlebar-buttonbox {
+    appearance: none !important;
+    top: -13px !important;
+    position: absolute !important;
+    flex-direction: row !important;
+    display: flex !important;
+    width: calc(100vw - 12px) !important;
+    height: 25px !important;
+    justify-content: end !important;
+}
+
+/* make room for window control buttons */
+
+#unifiedToolbar {
+    position: relative !important;
+    margin-left: 75px !important;
+    margin-right: 40px !important;
+    z-index: 1 !important;
+}
+
+/* mirror max and restore button */
+
+.titlebar-max, .titlebar-restore {
+    transform: scaleX(-1) !important;
+}
+
+/* move window control buttons when spacestoolbar is active */
+
+:root[spacestoolbar="true"] .titlebar-buttonbox {
+    appearance: none !important;
+    top: -13px !important;
+    margin-right: 40px !important;
+    position: absolute !important;
+    flex-direction: row !important;
+    display: flex !important;
+    width: calc(100vw - 52px) !important;
+    height: 25px !important;
+    justify-content: end !important;
+}
+.titlebar-max, .titlebar-restore {
+    margin-right: calc(100vw - 69px) !important;
+}
+.titlebar-min {
+    margin-right: calc(41px - 100vw) !important;
+}
+:root[spacestoolbar="true"][uidensity="touch"] .titlebar-close {
+    margin-right: 20px !important;
+}
+:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-close {
+    margin-right: 10px !important;
+}
+:root[spacestoolbar="true"][uidensity="touch"] .titlebar-max,
+:root[spacestoolbar="true"][uidensity="touch"] .titlebar-restore {
+    margin-right: calc(100vw - 129px) !important;
+}
+:root[spacestoolbar="true"][uidensity="compact"] .titlebar-max,
+:root[spacestoolbar="true"][uidensity="compact"] .titlebar-restore {
+    margin-right: calc(100vw - 109px) !important;
+}
+:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-max,
+:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-restore {
+    margin-right: calc(100vw - 119px) !important;
+}
+:root[spacestoolbar="true"][uidensity="touch"] .titlebar-min {
+    margin-right: calc(101px - 100vw) !important;
+}
+:root[spacestoolbar="true"][uidensity="compact"] .titlebar-min {
+    margin-right: calc(81px - 100vw) !important;
+}
+:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-min {
+    margin-right: calc(91px - 100vw) !important;
+}

@@ -1,0 +1,61 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* This userChrome is for button layout Close right */
+
+@import "base.css";
+
+/****** window controls buttons ******/
+
+.titlebar-buttonbox-container {
+    position: absolute !important;
+}
+.titlebar-buttonbox {
+    appearance: none !important;
+    top: -13px !important;
+    position: absolute !important;
+    flex-direction: row-reverse !important;
+    display: flex !important;
+    width: calc(100vw - 8px) !important;
+    height: 25px !important;
+    justify-content: space-between !important;
+}
+
+/* make room for window control buttons */
+
+#unifiedToolbar {
+    position: relative !important;
+    margin-left: 4px !important;
+    margin-right: 40px !important;
+    z-index: 2 !important;
+}
+
+/* mirror max and restore button */
+
+.titlebar-max, .titlebar-restore {
+    transform: scaleX(-1) !important;
+}
+
+/* move window control buttons when spacestoolbar is active */
+
+:root[spacestoolbar="true"] .titlebar-buttonbox {
+    appearance: none !important;
+    top: -13px !important;
+    margin-right: 40px !important;
+    position: absolute !important;
+    flex-direction: row-reverse !important;
+    display: flex !important;
+    width: calc(100vw - 45px) !important;
+    height: 25px !important;
+    justify-content: space-between !important;
+}
+:root[spacestoolbar="true"][uidensity="compact"] .titlebar-close {
+    margin-right: 0px !important;
+}
+:root[spacestoolbar="true"][uidensity="touch"] .titlebar-close {
+    margin-right: 18px !important;
+}
+:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-close {
+    margin-right: 8px !important;
+}

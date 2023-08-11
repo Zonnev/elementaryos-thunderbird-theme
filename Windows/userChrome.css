@@ -1,0 +1,44 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* This userChrome is for button layout Windows */
+
+@import "base.css";
+
+/****** window controls buttons ******/
+
+.titlebar-buttonbox-container {
+    position: absolute !important;
+}
+.titlebar-buttonbox {
+    appearance: none !important;
+    top: -13px !important;
+    position: absolute !important;
+    flex-direction: row !important;
+    display: flex !important;
+    width: calc(100vw - 6px) !important;
+    height: 25px !important;
+    justify-content: end !important;
+}
+
+/* make room for window control buttons */
+
+#unifiedToolbar {
+    position: relative !important;
+    margin-left: 4px !important;
+    margin-right: 110px !important;
+    z-index: 2 !important;
+}
+
+/* move window control buttons when spacestoolbar is active */
+
+:root[spacestoolbar="true"][uidensity="compact"] .titlebar-buttonbox {
+    width: calc(100vw - 43px) !important;
+}
+:root[spacestoolbar="true"][uidensity="touch"] .titlebar-buttonbox {
+    width: calc(100vw - 61px) !important;
+}
+:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-buttonbox {
+    width: calc(100vw - 51px) !important;
+}
