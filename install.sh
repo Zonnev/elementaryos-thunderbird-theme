@@ -16,25 +16,20 @@ function getFlatpakProcessIdCommand {
   echo "flatpak ps --columns=pid,application | grep \"${FLATPAK_ID}\" | cut -f1"
 }
 
-function getSnapProcessIdCommand {
-  local PROCESS_NAME="${1}"
-  echo "for pid in \$(pidof ${PROCESS_NAME}); do ps --no-headers \${pid} | grep '/snap/' | awk '{print \$1}'; done"
-}
-
 declare -a APPLICATIONS
 declare -A APPLICATIONS_PROCESS_ID
 declare -A APPLICATIONS_PROFILES_ROOTS
 
 DEFAULT_APPLICATION="🐦 Thunderbird"
 
-APPLICATION="${DEFAULT_APPLICATION}";
-APPLICATIONS+=("${APPLICATION}");
+APPLICATION="${DEFAULT_APPLICATION}"
+APPLICATIONS+=("${APPLICATION}")
 APPLICATIONS_PROCESS_ID["${APPLICATION}"]='pidof "thunderbird" || exit 0'
 APPLICATIONS_PROFILES_ROOTS["${APPLICATION}"]="${HOME}/.thunderbird"
 
 FLATPAK_ID="org.mozilla.Thunderbird"
-APPLICATION="🐦 Thunderbird (📦 Flatpak)";
-APPLICATIONS+=("${APPLICATION}");
+APPLICATION="🐦 Thunderbird (📦 Flatpak)"
+APPLICATIONS+=("${APPLICATION}")
 APPLICATIONS_PROCESS_ID["${APPLICATION}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
 APPLICATIONS_PROFILES_ROOTS["${APPLICATION}"]="${HOME}/.var/app/${FLATPAK_ID}/.thunderbird"
 
@@ -132,7 +127,7 @@ $(
   for INDEX in "${!LAYOUTS[@]}"; do
     LAYOUT="${LAYOUTS[${INDEX}]}"
     TITLEBAR="${LAYOUTS_TITLEBARS[${LAYOUT}]}"
-    printf "%3s. %-30s %s\n" "$((INDEX+1))" "${LAYOUT}" "${TITLEBAR}"
+    printf "%3s. %-30s %s\n" "$((INDEX + 1))" "${LAYOUT}" "${TITLEBAR}"
   done
 )
 
@@ -142,7 +137,7 @@ Installation script supports:
 
 $(
   for INDEX in "${!APPLICATIONS[@]}"; do
-    printf "%3s. %s\n" "$((INDEX+1))" "${APPLICATIONS[${INDEX}]}"
+    printf "%3s. %s\n" "$((INDEX + 1))" "${APPLICATIONS[${INDEX}]}"
   done
 )
 
@@ -257,11 +252,10 @@ function replaceHomedir {
   fi
 }
 
-
 function parseWindowControlsLayout {
   local LAYOUT="${1}"
   for INDEX in "${!LAYOUTS[@]}"; do
-    if [ $((${INDEX}+1)) == "${LAYOUT}" ]; then
+    if [ $((${INDEX} + 1)) == "${LAYOUT}" ]; then
       echo "${LAYOUTS[${INDEX}]}"
       break
     fi
@@ -275,74 +269,75 @@ function parseWindowControlsLayout {
 function parseOptions {
   while [ $# -ne 0 ]; do
     case "${1}" in
-      "-h"|"--help")
-        info "${APP_HELP_MESSAGE}"
-        exit 0
-        ;;
+    "-h" | "--help")
+      info "${APP_HELP_MESSAGE}"
+      exit 0
+      ;;
 
-      "--application-profile")
-        APPLICATION_PROFILES+=("${2}")
-        shift 2
-        ;;
+    "--application-profile")
+      APPLICATION_PROFILES+=("${2}")
+      shift 2
+      ;;
 
-      "--controls-layout")
-        case "${2}" in
-          # empty string
-          ""|"--"*)
-            error "💥 Controls layout is not specified."
-            error "❓ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
-            exit 1
-            ;;
-
-          # not a number
-          *[!0-9]*)
-            CONTROLS_LAYOUT="$(parseWindowControlsLayout "${2}")"
-            if [ -z "${CONTROLS_LAYOUT}" ]; then
-              error "💥 Unknown controls layout '${2}' is specified."
-              error "❓ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
-              exit 1
-            fi
-            shift 2
-            ;;
-
-          # number
-          *)
-            CONTROLS_LAYOUT="$(parseWindowControlsLayout "${2}")"
-            if [ -z "${CONTROLS_LAYOUT}" ]; then
-              error "💥 Unknown controls layout number '${2}' is specified."
-              error "❓ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
-              exit 1
-            fi
-            shift 2
-            ;;
-        esac
-        ;;
-
-      "--github-branch-name")
-        GITHUB_BRANCH_NAME="${2}"
-        shift 2
-        ;;
-
-      "--github-project-name")
-        GITHUB_PROJECT_NAME="${2}"
-        shift 2
-        ;;
-
-      "--skip-preferences-patch")
-        PATCH_PREFERENCES="no"
-        shift
-        ;;
-
-      "--update")
-        PATCH_PREFERENCES="no"
-        UPDATE_ONLY="yes"
-        shift
-        ;;
-
-      *)
-        error "💥 Unknown option: ${1}"
-        error "❓ Try '${APP_EXECUTABLE} --help' to see available options."
+    "--controls-layout")
+      case "${2}" in
+      # empty string
+      "" | "--"*)
+        error "💥 Controls layout is not specified."
+        error "❓ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
         exit 1
+        ;;
+
+      # not a number
+      *[!0-9]*)
+        CONTROLS_LAYOUT="$(parseWindowControlsLayout "${2}")"
+        if [ -z "${CONTROLS_LAYOUT}" ]; then
+          error "💥 Unknown controls layout '${2}' is specified."
+          error "❓ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
+          exit 1
+        fi
+        shift 2
+        ;;
+
+      # number
+      *)
+        CONTROLS_LAYOUT="$(parseWindowControlsLayout "${2}")"
+        if [ -z "${CONTROLS_LAYOUT}" ]; then
+          error "💥 Unknown controls layout number '${2}' is specified."
+          error "❓ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
+          exit 1
+        fi
+        shift 2
+        ;;
+      esac
+      ;;
+
+    "--github-branch-name")
+      GITHUB_BRANCH_NAME="${2}"
+      shift 2
+      ;;
+
+    "--github-project-name")
+      GITHUB_PROJECT_NAME="${2}"
+      shift 2
+      ;;
+
+    "--skip-preferences-patch")
+      PATCH_PREFERENCES="no"
+      shift
+      ;;
+
+    "--update")
+      PATCH_PREFERENCES="no"
+      UPDATE_ONLY="yes"
+      shift
+      ;;
+
+    *)
+      error "💥 Unknown option: ${1}"
+      error "❓ Try '${APP_EXECUTABLE} --help' to see available options."
+      exit 1
+      ;;
     esac
   done
 }
@@ -365,8 +360,8 @@ function detectApplicationsProfiles {
     if [ -d "${FIREFOX_DIR}" ]; then
       PROFILES_FILE="${FIREFOX_DIR}/profiles.ini"
       if [ -f "${PROFILES_FILE}" ]; then
-        grep -E "^Path=" "${PROFILES_FILE}" | \
-          cut -d "=" -f2- | \
+        grep -E "^Path=" "${PROFILES_FILE}" |
+          cut -d "=" -f2- |
           xargs -I '{}' echo "${FIREFOX_DIR}/{}"
       else
         find "${FIREFOX_DIR}" -mindepth 1 -maxdepth 1 -type d
@@ -433,11 +428,11 @@ function installThemeAtApplicationProfile {
 
     if [ -f "${PREFERENCES_FILE}" ]; then
       local PREFERENCE="${2}"
-      local MATCH=$(\
-        grep "user_pref(\"${PREFERENCE}\"," "${PREFERENCES_FILE}" || echo "" \
+      local MATCH=$(
+        grep "user_pref(\"${PREFERENCE}\"," "${PREFERENCES_FILE}" || echo ""
       )
       if [ ! -z "${MATCH}" ]; then
-        local CURRENT_VALUE="${MATCH:$((14+${#PREFERENCE})):-2}"
+        local CURRENT_VALUE="${MATCH:$((14 + ${#PREFERENCE})):-2}"
         echo "${CURRENT_VALUE}"
       else
         echo ""
@@ -475,7 +470,7 @@ function installThemeAtApplicationProfile {
     fi
 
     if [ -z "${LINE_NUMBER}" ]; then
-      echo "user_pref(\"${PREFERENCE}\", ${TARGET_VALUE});" >> "${PREFERENCES_FILE}"
+      echo "user_pref(\"${PREFERENCE}\", ${TARGET_VALUE});" >>"${PREFERENCES_FILE}"
     else
       sed -i "${LINE_NUMBER}s/.*/user_pref(\"${PREFERENCE}\", "${TARGET_VALUE}");/" "${PREFERENCES_FILE}"
     fi
@@ -522,20 +517,20 @@ function installThemeAtApplicationProfile {
 
   function getApplicationUsesLegacyStylesheets {
     local APPLICATION_PROFILE="${1}"
-    local CURRENT_VALUE=$(\
+    local CURRENT_VALUE=$(
       getThunderbirdPreference "${APPLICATION_PROFILE}" \
-        "toolkit.legacyUserProfileCustomizations.stylesheets" \
+        "toolkit.legacyUserProfileCustomizations.stylesheets"
     )
     case "${CURRENT_VALUE}" in
-      "true")
-        echo "yes"
-        ;;
-      "false")
-        echo "no"
-        ;;
-      *)
-        echo "no"
-        ;;
+    "true")
+      echo "yes"
+      ;;
+    "false")
+      echo "no"
+      ;;
+    *)
+      echo "no"
+      ;;
     esac
   }
 
@@ -554,8 +549,8 @@ function installThemeAtApplicationProfile {
 
   function getApplicationVersion {
     local APPLICATION_PROFILE="${1}"
-    local CURRENT_VALUE=$(\
-      getThunderbirdPreference "${APPLICATION_PROFILE}" "extensions.lastAppVersion" \
+    local CURRENT_VALUE=$(
+      getThunderbirdPreference "${APPLICATION_PROFILE}" "extensions.lastAppVersion"
     )
 
     if [ -z "${CURRENT_VALUE}" ]; then
@@ -571,17 +566,14 @@ function installThemeAtApplicationProfile {
     local LAYOUT_PATH="${3}"
 
     local BASE_CSS="base.css"
-    local FLATPAK_CSS="flatpak.css"
     local USER_CHROME_CSS="userChrome.css"
 
     local CHROME_DIR="${APPLICATION_PROFILE}/chrome"
     local BASE_FILE="${CHROME_DIR}/${BASE_CSS}"
-    local FLATPAK_FILE="${CHROME_DIR}/${FLATPAK_CSS}"
     local USER_CHROME_FILE="${CHROME_DIR}/${USER_CHROME_CSS}"
 
     local FILES_URL="${GITHUB_URL_RAW}/${GITHUB_PROJECT_NAME}/${GITHUB_BRANCH_NAME}"
     local BASE_URL="${FILES_URL}/${BASE_CSS}"
-    local FLATPAK_URL="${FILES_URL}/${FLATPAK_CSS}"
     local USER_CHROME_URL="${FILES_URL}/${LAYOUT_PATH}/${USER_CHROME_CSS}"
 
     if [ ! -d ${CHROME_DIR} ]; then
@@ -591,14 +583,6 @@ function installThemeAtApplicationProfile {
 
     info "⬇️  Downloading ${BASE_CSS} (${BASE_URL})"
     wget --output-document="${BASE_FILE}" --quiet "${BASE_URL}"
-
-    if [[ "${APPLICATION}" == *"(📦 Flatpak)" ]] || [[ "${APPLICATION}" == *"(📦 Snap)" ]]; then
-      info "⬇️  Downloading ${FLATPAK_CSS} (${FLATPAK_URL})"
-      wget --output-document="${FLATPAK_FILE}" --quiet "${FLATPAK_URL}"
-    elif [ -f "${FLATPAK_FILE}" ]; then
-      info "🗑️  Removing ${FLATPAK_CSS} (${FLATPAK_FILE})"
-      rm "${FLATPAK_FILE}"
-    fi
 
     info "⬇️  Downloading ${USER_CHROME_CSS} (${USER_CHROME_URL})"
     wget --output-document="${USER_CHROME_FILE}" --quiet "${USER_CHROME_URL}"
