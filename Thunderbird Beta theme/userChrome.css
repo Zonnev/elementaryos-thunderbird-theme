@@ -83,9 +83,10 @@ form {
 }
 menuseparator,
 toolbarseparator {
-    border-top: 1px solid rgba(0,0,0,0.15) !important;
     border-bottom: 1px solid rgba(255,255,255,1) !important;
     margin: 4px 0px 4px 0px !important;
+    padding-inline: 0px !important;
+    padding-block: 0px !important;
 }
 :root[uidensity="compact"] #unifiedToolbar {
     min-height: 38px !important;
@@ -331,12 +332,7 @@ input[type="search"]:-moz-lwtheme-brighttext {
 }
 menuseparator:-moz-lwtheme-brighttext,
 toolbarseparator:-moz-lwtheme-brighttext  {
-    border-top: 1px solid rgba(0,0,0,0.3) !important;
-}
-#threadTree treechildren:-moz-lwtheme-brighttext {
-    background-image: linear-gradient(rgba(0,0,0,0.03) 50%, #353535 50%) !important;
-    background-size: 60px 60px !important;
-    background-repeat: repeat !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
 }
 #toolbar-menubar:-moz-lwtheme-brighttext {
     background-color: #2F2F2F !important;
@@ -399,13 +395,7 @@ input[type="search"] {
 }
 menuseparator,
 toolbarseparator {
-    border-top: 1px solid rgba(0,0,0,0.3) !important;
     border-bottom: 1px solid rgba(255,255,255,0.05) !important;
-}
-#threadTree treechildren {
-    background-image: linear-gradient(rgba(0,0,0,0.03) 50%, #353535 50%) !important;
-    background-size: 60px 60px !important;
-    background-repeat: repeat !important;
 }
 #toolbar-menubar {
     background-color: #2F2F2F !important;
