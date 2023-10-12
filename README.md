@@ -29,4 +29,4 @@ Or install theme manually:
 
 ## 🚧 Work in progress
 
-- I have added a `userChrome.css` for **Thunderbird Beta** in the folder `Thunderbird Beta theme`.
+- I have added a `userChrome.css` for **Thunderbird Beta** in the folder `Thunderbird Beta theme`. For now the install script overrides the files in the beta folder so make sure you add the `userChrome.css` manually in the `chrome` folder of your beta profile (usually the profile folder has `-beta` in the folder name).
