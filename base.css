@@ -37,8 +37,8 @@ toolbarseparator {
     margin: 4px 0px 4px 0px !important;
 }
 :root[uidensity="compact"] #unifiedToolbar {
-    min-height: 36px !important;
-    max-height: 36px !important;
+    min-height: 42px !important;
+    max-height: 42px !important;
 }
 :root[uidensity="touch"] #unifiedToolbar {
     min-height: 58px !important;
