@@ -9,7 +9,7 @@
 /****** window controls buttons ******/
 
 .titlebar-buttonbox-container {
-    position: absolute !important;
+    position: relative !important;
 }
 .titlebar-buttonbox {
     appearance: none !important;
@@ -28,13 +28,7 @@
     position: relative !important;
     margin-left: 40px !important;
     margin-right: 40px !important;
-    z-index: 1 !important;
-}
-
-/* mirror max and restore button */
-
-.titlebar-max, .titlebar-restore {
-    transform: scaleX(-1) !important;
+    z-index: 2 !important;
 }
 
 /* move window control buttons when spacestoolbar is active */
@@ -50,9 +44,12 @@
     height: 25px !important;
     justify-content: space-between !important;
 }
-:root[spacestoolbar="true"][uidensity="touch"] .titlebar-close {
-    margin-right: 20px !important;
+:root[spacestoolbar="true"][uidensity="compact"] .titlebar-min {
+    margin-right: -3px !important;
 }
-:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-close {
-    margin-right: 10px !important;
+:root[spacestoolbar="true"][uidensity="touch"] .titlebar-min {
+    margin-right: 15px !important;
+}
+:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-min {
+    margin-right: 5px !important;
 }

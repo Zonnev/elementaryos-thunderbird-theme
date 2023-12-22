@@ -9,7 +9,7 @@
 /****** window controls buttons ******/
 
 .titlebar-buttonbox-container {
-    position: absolute !important;
+    position: relative !important;
 }
 .titlebar-buttonbox {
     appearance: none !important;
@@ -17,9 +17,9 @@
     position: absolute !important;
     flex-direction: row !important;
     display: flex !important;
-    width: calc(100vw - 12px) !important;
+    width: 100vw !important;
     height: 25px !important;
-    justify-content: end !important;
+    justify-content: start !important;
 }
 
 /* make room for window control buttons */
@@ -28,13 +28,7 @@
     position: relative !important;
     margin-left: 75px !important;
     margin-right: 40px !important;
-    z-index: 1 !important;
-}
-
-/* mirror max and restore button */
-
-.titlebar-max, .titlebar-restore {
-    transform: scaleX(-1) !important;
+    z-index: 2 !important;
 }
 
 /* move window control buttons when spacestoolbar is active */
@@ -46,40 +40,22 @@
     position: absolute !important;
     flex-direction: row !important;
     display: flex !important;
-    width: calc(100vw - 52px) !important;
+    width: 100vw !important;
     height: 25px !important;
-    justify-content: end !important;
+    justify-content: start !important;
 }
 .titlebar-max, .titlebar-restore {
-    margin-right: calc(100vw - 69px) !important;
-}
-.titlebar-min {
-    margin-right: calc(41px - 100vw) !important;
-}
-:root[spacestoolbar="true"][uidensity="touch"] .titlebar-close {
-    margin-right: 20px !important;
-}
-:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-close {
-    margin-right: 10px !important;
+    margin-left: calc(100vw - 103px) !important;
 }
 :root[spacestoolbar="true"][uidensity="touch"] .titlebar-max,
 :root[spacestoolbar="true"][uidensity="touch"] .titlebar-restore {
-    margin-right: calc(100vw - 129px) !important;
+    margin-left: calc(100vw - 158px) !important;
 }
 :root[spacestoolbar="true"][uidensity="compact"] .titlebar-max,
 :root[spacestoolbar="true"][uidensity="compact"] .titlebar-restore {
-    margin-right: calc(100vw - 109px) !important;
+    margin-left: calc(100vw - 140px) !important;
 }
 :root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-max,
 :root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-restore {
-    margin-right: calc(100vw - 119px) !important;
-}
-:root[spacestoolbar="true"][uidensity="touch"] .titlebar-min {
-    margin-right: calc(101px - 100vw) !important;
-}
-:root[spacestoolbar="true"][uidensity="compact"] .titlebar-min {
-    margin-right: calc(81px - 100vw) !important;
-}
-:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-min {
-    margin-right: calc(91px - 100vw) !important;
+    margin-left: calc(100vw - 148px) !important;
 }
