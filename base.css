@@ -36,6 +36,13 @@ toolbarseparator {
     border-bottom: 1px solid rgba(255,255,255,1) !important;
     margin: 4px 0px 4px 0px !important;
 }
+menuseparator {
+    padding-block: 0px !important;
+    padding-inline: 0px !important;
+}
+menuseparator::before {
+    border: none !important;
+}
 :root[uidensity="compact"] #unifiedToolbar {
     min-height: 42px !important;
     max-height: 42px !important;
@@ -49,7 +56,43 @@ toolbarseparator {
     max-height: 48px !important;
 }
 unified-toolbar {
-  border-bottom: none !important;
+    border-bottom: none !important;
+}
+
+/**** menuitems hover ****/
+
+:root[uidensity="compact"] toolbarbutton.subviewbutton:not(#appMenu-uiDensity-controls > toolbarbutton):not(#appMenu-fontSize-controls > toolbarbutton):not(.panel-header > toolbarbutton):is(:hover, :active, :focus-visible, [open]) {
+    margin: 0px !important;
+    padding-inline: 12px !important;
+    border-radius: 0px !important;
+}
+:root:not([uidensity="compact"]):not([uidensity="touch"]) toolbarbutton.subviewbutton:not(#appMenu-uiDensity-controls > toolbarbutton):not(#appMenu-fontSize-controls > toolbarbutton):not(.panel-header > toolbarbutton):is(:hover, :active, :focus-visible, [open]) {
+    margin: 0px !important;
+    padding-inline: 16px !important;
+    border-radius: 0px !important;
+}
+:root[uidensity="touch"] toolbarbutton.subviewbutton:not(#appMenu-uiDensity-controls > toolbarbutton):not(#appMenu-fontSize-controls > toolbarbutton):not(.panel-header > toolbarbutton):is(:hover, :active, :focus-visible, [open]) {
+    margin: 0px !important;
+    padding-inline: 16px !important;
+    border-radius: 0px !important;
+}
+:root[uidensity="compact"] menuitem[_moz-menuactive="true"],
+:root[uidensity="compact"] menu[_moz-menuactive="true"]:not(menubar > menu) {
+    margin: 0px !important;
+    padding-inline: 11px !important;
+    border-radius: 0px !important;
+}
+:root:not([uidensity="touch"]):not([uidensity="compact"]) menuitem[_moz-menuactive="true"],
+:root:not([uidensity="touch"]):not([uidensity="compact"]) menu[_moz-menuactive="true"]:not(menubar > menu) {
+    margin: 0px !important;
+    padding-inline: 12px !important;
+    border-radius: 0px !important;
+}
+:root[uidensity="touch"] menuitem[_moz-menuactive="true"],
+:root[uidensity="touch"] menu[_moz-menuactive="true"]:not(menubar > menu) {
+    margin: 0px !important;
+    padding-inline: 12px !important;
+    border-radius: 0px !important;
 }
 
 /**** tabs ****/
@@ -225,6 +268,9 @@ unified-toolbar {
     background-color: transparent !important;
     background-image: none !important;
 }
+:root {
+    --layout-border-1: rgba(0,0,0,0.20) !important;
+}
 
 /* stand alone dark focus */
 #navigation-toolbox:-moz-lwtheme-brighttext:-moz-window-inactive {
@@ -289,6 +335,9 @@ toolbarseparator:-moz-lwtheme-brighttext  {
 }
 #toolbar-menubar:-moz-lwtheme-brighttext {
     background-color: #2F2F2F !important;
+}
+:root:-moz-lwtheme-brighttext {
+    --layout-border-1: rgba(0,0,0,0.80) !important;
 }
 
 /* system dark focus */
@@ -358,4 +407,7 @@ toolbarseparator {
 }
 #toolbar-menubar {
     background-color: #2F2F2F !important;
+}
+:root {
+    --layout-border-1: rgba(0,0,0,0.80) !important;
 }}
