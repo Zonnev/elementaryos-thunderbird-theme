@@ -43,12 +43,15 @@
     height: 25px !important;
     justify-content: space-between !important;
 }
-:root[spacestoolbar="true"][uidensity="touch"] .titlebar-max {
+:root[spacestoolbar="true"][uidensity="touch"] .titlebar-max,
+:root[spacestoolbar="true"][uidensity="touch"] .titlebar-restore {
     margin-right: 8px !important;
 }
-:root[spacestoolbar="true"][uidensity="compact"] .titlebar-max {
+:root[spacestoolbar="true"][uidensity="compact"] .titlebar-max,
+:root[spacestoolbar="true"][uidensity="compact"] .titlebar-restore {
     margin-right: -10px !important;
 }
-:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-max {
+:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-max,
+:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-restore  {
     margin-right: -2px !important;
 }
