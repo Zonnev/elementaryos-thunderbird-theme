@@ -26,7 +26,3 @@ Or install theme manually:
 5. Look which **window button layout** you are using and put the `userChrome.css` from the **corresponding folder** in the `chrome` folder.
 6. In Thunderbird enter the Menu and select Settings, scroll all the way down till you see the Config Editor button. Press the button and search for `toolkit.legacyUserProfileCustomizations.stylesheets` and set it to `true`.
 7. Restart Thunderbird and the theme should be applied.
-
-## 🚧 Work in progress
-
-- I have added a `userChrome.css` for **Thunderbird Beta** in the folder `Thunderbird Beta theme`. For now the install script overrides the files in the beta folder so make sure you add the `userChrome.css` manually in the `chrome` folder of your beta profile (usually the profile folder has `-beta` in the folder name).
