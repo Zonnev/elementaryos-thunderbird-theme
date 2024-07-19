@@ -20,7 +20,7 @@
     position: absolute !important;
     flex-direction: row !important;
     display: flex !important;
-    width: calc(100vw - 12px) !important;
+    width: calc(100vw - 2px) !important;
     height: 25px !important;
     justify-content: space-between !important;
 }
@@ -48,10 +48,13 @@
     justify-content: space-between !important;
 }
 :root[spacestoolbar="true"][uidensity="touch"] .titlebar-max {
-    margin-right: 18px !important;
+    margin-right: 8px !important;
+}
+:root[spacestoolbar="true"][uidensity="compact"] .titlebar-max {
+    margin-right: -10px !important;
 }
 :root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-max {
-    margin-right: 8px !important;
+    margin-right: -2px !important;
 }
 
 /****** other elements ******/

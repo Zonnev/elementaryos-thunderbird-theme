@@ -17,7 +17,7 @@
     position: absolute !important;
     flex-direction: row !important;
     display: flex !important;
-    width: calc(100vw - 8px) !important;
+    width: calc(100vw - 2px) !important;
     height: 25px !important;
     justify-content: space-between !important;
 }
@@ -46,26 +46,26 @@
 }
 .titlebar-max,
 .titlebar-restore {
-    margin-left: 10px !important;
+    margin-left: 5px !important;
 }
 :root[spacestoolbar="true"][uidensity="compact"] .titlebar-max,
 :root[spacestoolbar="true"][uidensity="compact"] .titlebar-restore {
-    margin-left: 10px !important;
+    margin-left: 5px !important;
 }
 :root[spacestoolbar="true"][uidensity="touch"] .titlebar-max,
 :root[spacestoolbar="true"][uidensity="touch"] .titlebar-restore {
-    margin-left: 10px !important;
+    margin-left: 5px !important;
 }
 :root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-max,
 :root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-restore {
-    margin-left: 10px !important;
+    margin-left: 5px !important;
 }
 :root[spacestoolbar="true"][uidensity="compact"] .titlebar-close {
-    margin-right: 0px !important;
+    margin-right: -6px !important;
 }
 :root[spacestoolbar="true"][uidensity="touch"] .titlebar-close {
-    margin-right: 18px !important;
+    margin-right: 12px !important;
 }
 :root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-close {
-    margin-right: 8px !important;
+    margin-right: 2px !important;
 }
