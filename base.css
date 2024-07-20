@@ -167,6 +167,19 @@ unified-toolbar {
     padding: 0px 6px 2px 6px !important;
 }
 
+/* make tab content centered except tabs close button */
+.tab-icon-image {
+    order: 1 !important;
+    margin-inline-start: auto !important;
+}
+.tab-close-button {
+    order: 2 !important;
+}
+.tab-label-container {
+    max-width: min-content !important;
+    margin-inline-end: auto !important;
+}
+
 /**** hamburger menu ****/
 
 #button-appmenu {
