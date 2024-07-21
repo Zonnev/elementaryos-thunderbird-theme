@@ -6,10 +6,8 @@
 
 For now theme installation is supported for:
 
-1. [🐦 Thunderbird](https://www.thunderbird.net/en-US/) installed with apt package manager.
-   Install it with command `sudo apt install thunderbird`.
-2. [🐦 Thunderbird 📦 Flatpak version](https://flathub.org/apps/details/org.mozilla.Thunderbird).
-   Install it using AppCenter.
+1. [🐦 Thunderbird 📦 download package](https://www.thunderbird.net/en-US/). [How to install for advanced users](https://support.mozilla.org/en-US/kb/installing-thunderbird-linux?redirectslug=installing-thunderbird-ubuntu-linux&redirectlocale=en-US#w_installing-thunderbird-manually-for-advanced-users).
+2. [🐦 Thunderbird 📦 Flatpak version](https://flathub.org/apps/details/org.mozilla.Thunderbird). Install it using AppCenter.
 
 Use this one line install script to install theme. Just copy the line to your terminal and press enter:
 
