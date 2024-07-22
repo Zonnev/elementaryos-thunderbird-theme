@@ -11,11 +11,11 @@ For now theme installation is supported for:
 **You can also use MenuLibre app to create a Thunderbird desktop entery:**
 - Install MenuLibre in the AppCenter.
 - Download Thunderbird from the [website](https://www.thunderbird.net/en-US/) and extract in a folder of your choice.
-- Open MenuLibre, select `Internet` in the list on the left and then press the `+` button. Select `Add Laucher`.
+- Open MenuLibre, select `Internet` in the list on the left and then press the `+` button. Select `Add Launcher`.
 - Go to `Application details` and enter the path to the folder of Thunderbird in `Command`.
 - Add `/thunderbird` to the folder path.
 - Press the icon to the left of `New Launcher` and select `Browse Files`.
-- Go to your Thunderbird folder `/chrome/icons/default` and select `default256.png`.
+- In `Browse Files` go to your Thunderbird folder `/chrome/icons/default` and select `default256.png`.
 - Press `New Launcher` and type `Thunderbird`.
 - Close the app and press the `save` button.
 - You can now see the Thunderbird launcher in the Internet section of Slingshot and you can drag it to place it in Plank.
