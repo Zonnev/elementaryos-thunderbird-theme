@@ -1,6 +1,6 @@
 # An elementary OS theme for Thunderbird
 
-![Screenshot](Thunderbird_eOS_supernova_theme.png)
+![Screenshot](Thunderbird_eOS_nubula_theme.png)
 
 ## ⬇️ Installation
 
