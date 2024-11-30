@@ -12,12 +12,12 @@ For now theme installation is supported for:
 **You can use Main menu to create a Thunderbird desktop entry:**
 - Download Thunderbird from the [website](https://www.thunderbird.net/en-US/) and extract in a folder of your choice.
 - Open [Main menu](https://flathub.org/apps/page.codeberg.libre_menu_editor.LibreMenuEditor) (install it in AppCenter), click on the Settings wheel in the app list on the top right and select `New launcher`.
-- Fill in each section starting with **Appearance**. Press the **folder icon** and go to your Thunderbird folder and in `chrome/icons/default` select `default256.png`.
+- Fill in each section starting with **Appearance**. Press the **folder icon** and go to your Thunderbird folder and in `/chrome/icons/default` select `default128.png`.
 - In **Description** you can fill in `Thunderbird` as name of the launcher.
-- In **Execution** and **Default command** you fill in your Thunderbird folder location like `home/<username>/Apps/thunderbird/thunderbird` where the last "thunderbird" is the run file.
+- In **Execution** and **Default command** you fill in your Thunderbird folder location like `/home/<username>/Apps/thunderbird/thunderbird` where the last "thunderbird" is the run file.
 - In **Visibility** you can toggle **Show an animation until the application is visible** and **Show this application in the main menu** `on`.
 - Then under that in **Menu** you can choose in which category the launcher is showing, like `Internet`.
-- Save by clicking the `save` button in the top bar of the window.
+- Save by clicking the `Save` button in the top bar of the window.
 
 **Now you need a dot under the Thunderbird icon when opened in the dock. Edit the desktop entry file:**
 - In the left list of **Main menu**, select Thunderbird and scroll down to **Advanced** section and press the icon on the right, this opens **Code** with the desktop entry file visible.
