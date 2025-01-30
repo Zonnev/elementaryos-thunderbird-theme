@@ -9,14 +9,16 @@
 /****** window controls buttons ******/
 
 .titlebar-buttonbox-container {
-    position: absolute !important;
+    position: relative !important;
 }
 .titlebar-buttonbox {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     appearance: none !important;
-    top: -13px !important;
     position: absolute !important;
     flex-direction: row !important;
     display: flex !important;
+    margin-left: -99.5vw !important;
     width: calc(100vw - 6px) !important;
     height: 25px !important;
     justify-content: end !important;
@@ -29,16 +31,4 @@
     margin-left: 4px !important;
     margin-right: 110px !important;
     z-index: 2 !important;
-}
-
-/* move window control buttons when spacestoolbar is active */
-
-:root[spacestoolbar="true"][uidensity="compact"] .titlebar-buttonbox {
-    width: calc(100vw - 43px) !important;
-}
-:root[spacestoolbar="true"][uidensity="touch"] .titlebar-buttonbox {
-    width: calc(100vw - 61px) !important;
-}
-:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-buttonbox {
-    width: calc(100vw - 51px) !important;
 }

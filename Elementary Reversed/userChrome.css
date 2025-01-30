@@ -9,15 +9,17 @@
 /****** window controls buttons ******/
 
 .titlebar-buttonbox-container {
-    position: absolute !important;
+    position: relative !important;
 }
 .titlebar-buttonbox {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     appearance: none !important;
-    top: -13px !important;
     position: absolute !important;
     flex-direction: row !important;
     display: flex !important;
-    width: calc(100vw - 2px) !important;
+    margin-left: -99.5vw !important;
+    width: calc(100vw - 8px) !important;
     height: 25px !important;
     justify-content: space-between !important;
 }
@@ -35,37 +37,19 @@
 
 :root[spacestoolbar="true"] .titlebar-buttonbox {
     appearance: none !important;
-    top: -13px !important;
-    margin-right: 40px !important;
     position: absolute !important;
     flex-direction: row !important;
     display: flex !important;
-    width: calc(100vw - 45px) !important;
+    margin-left: -97vw !important;
+    width: calc(100vw - 46px) !important;
     height: 25px !important;
     justify-content: space-between !important;
 }
-.titlebar-max,
-.titlebar-restore {
-    margin-left: 5px !important;
-}
-:root[spacestoolbar="true"][uidensity="compact"] .titlebar-max,
-:root[spacestoolbar="true"][uidensity="compact"] .titlebar-restore {
-    margin-left: 5px !important;
-}
 :root[spacestoolbar="true"][uidensity="touch"] .titlebar-max,
 :root[spacestoolbar="true"][uidensity="touch"] .titlebar-restore {
-    margin-left: 5px !important;
+    margin-left: 15px !important;
 }
 :root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-max,
-:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-restore {
+:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-restore  {
     margin-left: 5px !important;
-}
-:root[spacestoolbar="true"][uidensity="compact"] .titlebar-close {
-    margin-right: -6px !important;
-}
-:root[spacestoolbar="true"][uidensity="touch"] .titlebar-close {
-    margin-right: 12px !important;
-}
-:root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-close {
-    margin-right: 2px !important;
 }

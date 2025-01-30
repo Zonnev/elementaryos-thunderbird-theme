@@ -12,8 +12,9 @@
     position: relative !important;
 }
 .titlebar-buttonbox {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     appearance: none !important;
-    top: -13px !important;
     margin-left: 3px !important;
     position: absolute !important;
     flex-direction: row !important;
@@ -36,7 +37,6 @@
 
 :root[spacestoolbar="true"] .titlebar-buttonbox {
     appearance: none !important;
-    top: -13px !important;
     position: absolute !important;
     flex-direction: row !important;
     display: flex !important;
