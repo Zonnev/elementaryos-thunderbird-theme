@@ -19,7 +19,7 @@
     position: absolute !important;
     flex-direction: row !important;
     display: flex !important;
-    width: calc(100vw - 5px) !important;
+    width: 100vw !important;
     height: 25px !important;
     justify-content: space-between !important;
 }
@@ -29,7 +29,7 @@
 #unifiedToolbar {
     position: relative !important;
     margin-left: 40px !important;
-    margin-right: 40px !important;
+    margin-right: 45px !important;
     z-index: 2 !important;
 }
 
@@ -40,16 +40,22 @@
     position: absolute !important;
     flex-direction: row !important;
     display: flex !important;
-    width: calc(100vw - 39px) !important;
+    width: 100vw !important;
     height: 25px !important;
     justify-content: space-between !important;
 }
+.titlebar-close {
+    padding-left: 2px !important;
+}
+.titlebar-min {
+    padding-right: 5px !important;
+}
 :root[spacestoolbar="true"][uidensity="compact"] .titlebar-min {
-    margin-right: 3px !important;
+    margin-right: 37px !important;
 }
 :root[spacestoolbar="true"][uidensity="touch"] .titlebar-min {
-    margin-right: 21px !important;
+    margin-right: 55px !important;
 }
 :root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-min {
-    margin-right: 11px !important;
+    margin-right: 45px !important;
 }

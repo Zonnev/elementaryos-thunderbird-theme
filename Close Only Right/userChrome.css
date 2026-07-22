@@ -28,7 +28,7 @@
 #unifiedToolbar {
     position: relative !important;
     margin-left: 4px !important;
-    margin-right: 40px !important;
+    margin-right: 45px !important;
     z-index: 2 !important;
 }
 
@@ -43,4 +43,7 @@
     width: calc(49px - 100vw) !important;
     height: 25px !important;
     justify-content: space-between !important;
+}
+.titlebar-close {
+    padding-right: 5px !important;
 }

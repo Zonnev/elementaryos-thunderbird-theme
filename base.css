@@ -172,7 +172,8 @@ menuseparator {
     padding-block: 0px !important;
     padding-inline: 0px !important;
 }
-menuseparator::before {
+menuseparator::before,
+toolbarseparator::before  {
     border: none !important;
 }
 :root[uidensity="compact"] #unifiedToolbar {
@@ -193,39 +194,75 @@ unified-toolbar {
 
 /**** menuitems hover ****/
 
-:root[uidensity="compact"] toolbarbutton.subviewbutton:not(#appMenu-uiDensity-controls > toolbarbutton):not(#appMenu-fontSize-controls > toolbarbutton):not(.panel-header > toolbarbutton):is(:hover, :active, :focus-visible, [open]) {
+:root[uidensity="compact"] toolbarbutton.subviewbutton:not(#tbpro-menu-id-root):not(#appMenu-uiDensity-controls > toolbarbutton):not(#appMenu-fontSize-controls > toolbarbutton):not(.panel-header > toolbarbutton):is(:hover, :active, :focus-visible, [open]) {
     margin: 0px !important;
     padding-inline: 12px !important;
     border-radius: 0px !important;
+    --panel-background-color-dimmed: rgba(0,0,0,0.08) !important;
+    --panel-background-color-dimmed-further: rgba(0,0,0,0.08) !important;
 }
-:root:not([uidensity="compact"]):not([uidensity="touch"]) toolbarbutton.subviewbutton:not(#appMenu-uiDensity-controls > toolbarbutton):not(#appMenu-fontSize-controls > toolbarbutton):not(.panel-header > toolbarbutton):is(:hover, :active, :focus-visible, [open]) {
+:root:not([uidensity="compact"]):not([uidensity="touch"]) toolbarbutton.subviewbutton:not(#tbpro-menu-id-root):not(#appMenu-uiDensity-controls > toolbarbutton):not(#appMenu-fontSize-controls > toolbarbutton):not(.panel-header > toolbarbutton):is(:hover, :active, :focus-visible, [open]) {
     margin: 0px !important;
     padding-inline: 16px !important;
     border-radius: 0px !important;
+    --panel-background-color-dimmed: rgba(0,0,0,0.08) !important;
+    --panel-background-color-dimmed-further: rgba(0,0,0,0.08) !important;
 }
-:root[uidensity="touch"] toolbarbutton.subviewbutton:not(#appMenu-uiDensity-controls > toolbarbutton):not(#appMenu-fontSize-controls > toolbarbutton):not(.panel-header > toolbarbutton):is(:hover, :active, :focus-visible, [open]) {
+:root[uidensity="touch"] toolbarbutton.subviewbutton:not(#tbpro-menu-id-root):not(#appMenu-uiDensity-controls > toolbarbutton):not(#appMenu-fontSize-controls > toolbarbutton):not(.panel-header > toolbarbutton):is(:hover, :active, :focus-visible, [open]) {
     margin: 0px !important;
     padding-inline: 16px !important;
     border-radius: 0px !important;
+    --panel-background-color-dimmed: rgba(0,0,0,0.08) !important;
+    --panel-background-color-dimmed-further: rgba(0,0,0,0.08) !important;
 }
-:root[uidensity="compact"] menuitem[_moz-menuactive="true"]:not(#mailContext-navigation > menuitem):not(#context-navigation > menuitem),
-:root[uidensity="compact"] menu[_moz-menuactive="true"]:not(menubar > menu) {
-    margin: 0px !important;
-    padding-inline: 11px !important;
+menu[_moz-menuactive],
+menuitem[_moz-menuactive] {
     border-radius: 0px !important;
+    --panel-background-color-dimmed-further: rgba(0,0,0,0.08) !important;
+    --background-color-dimmed-further: rgba(0,0,0,0.08) !important;
+    --menu-item-margin: 0px 0px !important;
 }
-:root:not([uidensity="touch"]):not([uidensity="compact"]) menuitem[_moz-menuactive="true"]:not(#mailContext-navigation > menuitem):not(#context-navigation > menuitem),
-:root:not([uidensity="touch"]):not([uidensity="compact"]) menu[_moz-menuactive="true"]:not(menubar > menu) {
-    margin: 0px !important;
-    padding-inline: 12px !important;
-    border-radius: 0px !important;
+toolbarbutton.subviewbutton:not([disabled], [open]):is(:active, :hover, :focus-visible) {
+    --panel-background-color-dimmed: rgba(0,0,0,0.08) !important;
+    --panel-background-color-dimmed-further: rgba(0,0,0,0.08) !important;
 }
-:root[uidensity="touch"] menuitem[_moz-menuactive="true"]:not(#mailContext-navigation > menuitem):not(#context-navigation > menuitem),
-:root[uidensity="touch"] menu[_moz-menuactive="true"]:not(menubar > menu) {
-    margin: 0px !important;
-    padding-inline: 12px !important;
-    border-radius: 0px !important;
+:root {
+  & :is(menupopup, panel) {
+    --menu-item-margin: 0px 0px !important;
+    --panel-background-color-dimmed: rgba(0,0,0,0.08) !important;
+    --panel-background-color-dimmed-further: rgba(0,0,0,0.08) !important;
+}}
+
+/* menuitems hover dark colors */
+
+@media (prefers-color-scheme: dark) {
+:root[uidensity="compact"] toolbarbutton.subviewbutton:not(#tbpro-menu-id-root):not(#appMenu-uiDensity-controls > toolbarbutton):not(#appMenu-fontSize-controls > toolbarbutton):not(.panel-header > toolbarbutton):is(:hover, :active, :focus-visible, [open]) {
+    --panel-background-color-dimmed: var(--button-primary-background-color) !important;
+    --panel-background-color-dimmed-further: var(--button-primary-background-color) !important;
 }
+:root:not([uidensity="compact"]):not([uidensity="touch"]) toolbarbutton.subviewbutton:not(#tbpro-menu-id-root):not(#appMenu-uiDensity-controls > toolbarbutton):not(#appMenu-fontSize-controls > toolbarbutton):not(.panel-header > toolbarbutton):is(:hover, :active, :focus-visible, [open]) {
+    --panel-background-color-dimmed: var(--button-primary-background-color) !important;
+    --panel-background-color-dimmed-further: var(--button-primary-background-color) !important;
+}
+:root[uidensity="touch"] toolbarbutton.subviewbutton:not(#tbpro-menu-id-root):not(#appMenu-uiDensity-controls > toolbarbutton):not(#appMenu-fontSize-controls > toolbarbutton):not(.panel-header > toolbarbutton):is(:hover, :active, :focus-visible, [open]) {
+    --panel-background-color-dimmed: var(--button-primary-background-color) !important;
+    --panel-background-color-dimmed-further: var(--button-primary-background-color) !important;
+}
+menu[_moz-menuactive],
+menuitem[_moz-menuactive] {
+    --panel-background-color-dimmed-further: var(--button-primary-background-color) !important;
+    --background-color-dimmed-further: var(--button-primary-background-color) !important;
+}
+toolbarbutton.subviewbutton:not([disabled], [open]):is(:active, :hover, :focus-visible) {
+    --panel-background-color-dimmed: var(--button-primary-background-color) !important;
+    --panel-background-color-dimmed-further: var(--button-primary-background-color) !important;
+}
+:root {
+  & :is(menupopup, panel) {
+    --panel-background-color-dimmed: var(--button-primary-background-color) !important;
+    --panel-background-color-dimmed-further: var(--button-primary-background-color) !important;
+}}}
+
 
 /**** tabs ****/
 
@@ -312,7 +349,7 @@ unified-toolbar {
 /* make tab separators: thanks to MrOtherGuy, source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/tab_separator_lines.css */
 .tabmail-tab {
     border-inline-start: 1px solid transparent !important;
-    border-image: 0 1 linear-gradient(transparent 20%, color-mix(in srgb, #D9D9D9 100%, transparent) 20%, color-mix(in srgb, #D9D9D9 100%, transparent) 90%, transparent 90%) !important;
+    border-image: 0 1 linear-gradient(transparent 20%, color-mix(in srgb, #D9D9D9 100%, transparent) 20%, color-mix(in srgb, #D9D9D9 100%, transparent) 80%, transparent 80%) !important;
 }
 #tabs-toolbar .tabmail-tab:hover,
 #tabs-toolbar:not([movingtab]) .tabmail-tab:hover + .tabmail-tab:not([first-visible-unpinned-tab]),

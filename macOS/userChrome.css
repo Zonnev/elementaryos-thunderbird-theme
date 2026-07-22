@@ -44,3 +44,16 @@
     height: 25px !important;
     justify-content: start !important;
 }
+
+/* remove padding from window control buttons */
+.titlebar-close,
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore {
+    padding-right: 0px !important;
+}
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore {
+    padding-left: 3px !important;
+}

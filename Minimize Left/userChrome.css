@@ -44,6 +44,17 @@
     height: 25px !important;
     justify-content: start !important;
 }
+.titlebar-close,
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore {
+    padding-right: 0px !important;
+}
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore {
+    padding-left: 3px !important;
+}
 .titlebar-max, .titlebar-restore {
     margin-left: calc(100vw - 104px) !important;
 }

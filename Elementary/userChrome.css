@@ -18,7 +18,7 @@
     position: absolute !important;
     flex-direction: row !important;
     display: flex !important;
-    width: calc(100vw - 2px) !important;
+    width: 100vw !important;
     height: 25px !important;
     justify-content: space-between !important;
 }
@@ -28,7 +28,7 @@
 #unifiedToolbar {
     position: relative !important;
     margin-left: 40px !important;
-    margin-right: 40px !important;
+    margin-right: 45px !important;
     z-index: 2 !important;
 }
 
@@ -39,19 +39,23 @@
     position: absolute !important;
     flex-direction: row !important;
     display: flex !important;
-    width: calc(100vw - 49px) !important;
+    width: 100vw !important;
     height: 25px !important;
     justify-content: space-between !important;
 }
+.titlebar-max,
+.titlebar-restore {
+    padding-right: 5px !important;
+}
 :root[spacestoolbar="true"][uidensity="touch"] .titlebar-max,
 :root[spacestoolbar="true"][uidensity="touch"] .titlebar-restore {
-    margin-right: 8px !important;
+    margin-right: 55px !important;
 }
 :root[spacestoolbar="true"][uidensity="compact"] .titlebar-max,
 :root[spacestoolbar="true"][uidensity="compact"] .titlebar-restore {
-    margin-right: -10px !important;
+    margin-right: 37px !important;
 }
 :root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-max,
 :root[spacestoolbar="true"]:not([uidensity="touch"]):not([uidensity="compact"]) .titlebar-restore  {
-    margin-right: -2px !important;
+    margin-right: 45px !important;
 }

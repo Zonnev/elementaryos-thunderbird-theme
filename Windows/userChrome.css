@@ -32,3 +32,18 @@
     margin-right: 110px !important;
     z-index: 2 !important;
 }
+
+/* remove padding from window control buttons */
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore {
+    padding-right: 0px !important;
+}
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore {
+    padding-left: 3px !important;
+}
+.titlebar-close {
+    padding-right: 7px !important
+}
