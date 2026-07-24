@@ -27,7 +27,7 @@ APPLICATIONS+=("${APPLICATION}")
 APPLICATIONS_PROCESS_ID["${APPLICATION}"]='pidof "thunderbird" || exit 0'
 APPLICATIONS_PROFILES_ROOTS["${APPLICATION}"]="${HOME}/.thunderbird"
 
-FLATPAK_ID="org.mozilla.Thunderbird"
+FLATPAK_ID="org.mozilla.thunderbird"
 APPLICATION="🐦 Thunderbird (📦 Flatpak)"
 APPLICATIONS+=("${APPLICATION}")
 APPLICATIONS_PROCESS_ID["${APPLICATION}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
