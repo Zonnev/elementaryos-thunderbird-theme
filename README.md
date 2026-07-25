@@ -23,7 +23,7 @@ For now theme installation is supported for:
 - In the left list of **Main menu**, select Thunderbird and scroll down to **Advanced** section and press the icon on the right, this opens **Code** with the desktop entry file visible.
 - Go to Code and type a new line in the `Desktop Entry` section: `StartupWMClass=thunderbird` for Thunderbird stable version (the default download). Code will automatically save the file so just close all and move the Thunderbird icon from Slingshot to the Dock and enjoy the fully working and integrated Thunderbird.
 
-###Use this one line install script to install theme. Just copy the line to your terminal and press enter:###
+Use this one line install script to install theme. **Just copy this line to your terminal and press enter:**
 
 ```bash
 bash <(wget --quiet --output-document - "https://raw.githubusercontent.com/Zonnev/elementaryos-thunderbird-theme/main/install.sh")
