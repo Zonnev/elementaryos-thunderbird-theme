@@ -6,7 +6,7 @@
 
 For now theme installation is supported for:
 
-1. [🐦 Thunderbird 📦 Flatpak version](https://flathub.org/apps/details/org.mozilla.Thunderbird). Install it using AppCenter.
+1. [🐦 Thunderbird 📦 Flatpak version](https://flathub.org/en/apps/org.mozilla.thunderbird). Install it using AppCenter.
 2. [🐦 Thunderbird 📦 download package](https://www.thunderbird.net/en-US/). [How to install for advanced users](https://support.mozilla.org/en-US/kb/installing-thunderbird-linux?redirectslug=installing-thunderbird-ubuntu-linux&redirectlocale=en-US#w_installing-thunderbird-manually-for-advanced-users).
 
 **You can use Main menu to create a Thunderbird desktop entry:**
