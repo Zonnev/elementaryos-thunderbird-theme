@@ -9,7 +9,10 @@ For now theme installation is supported for:
 1. [🐦 Thunderbird 📦 Flatpak version](https://flathub.org/en/apps/org.mozilla.thunderbird). Install it using AppCenter.
 2. [🐦 Thunderbird 📦 download package](https://www.thunderbird.net/en-US/). [How to install for advanced users](https://support.mozilla.org/en-US/kb/installing-thunderbird-linux?redirectslug=installing-thunderbird-ubuntu-linux&redirectlocale=en-US#w_installing-thunderbird-manually-for-advanced-users).
 
-**You can use Main menu to create a Thunderbird desktop entry:**
+######## Use Main Menu app to create a desktop entry
+
+<details><summary>Click to read the how-to:</summary>
+
 - Download Thunderbird from the [website](https://www.thunderbird.net/en-US/) and extract in a folder of your choice.
 - Open [Main menu](https://flathub.org/apps/page.codeberg.libre_menu_editor.LibreMenuEditor) (install it in AppCenter), click on the Settings wheel in the app list on the top right and select `New launcher`.
 - Fill in each section starting with **Appearance**. Press the **folder icon** and go to your Thunderbird folder and in `/chrome/icons/default` select `default128.png`.
@@ -22,6 +25,8 @@ For now theme installation is supported for:
 **Now you need a dot under the Thunderbird icon when opened in the dock. Edit the desktop entry file:**
 - In the left list of **Main menu**, select Thunderbird and scroll down to **Advanced** section and press the icon on the right, this opens **Code** with the desktop entry file visible.
 - Go to Code and type a new line in the `Desktop Entry` section: `StartupWMClass=thunderbird` for Thunderbird stable version (the default download). Code will automatically save the file so just close all and move the Thunderbird icon from Slingshot to the Dock and enjoy the fully working and integrated Thunderbird.
+
+</details>
 
 Use this one line install script to install theme. **Just copy this line to your terminal and press enter:**
 
